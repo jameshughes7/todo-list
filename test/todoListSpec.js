@@ -13,6 +13,10 @@ describe('todoList', function() {
       expect(todoList).to.exist;
     });
 
+    it('has a default complete value of false', function() {
+      expect(todoList.completed).to.equal(false)
+    });
+
     it('todoList starts with an empty array', function() {
       expect(todoList.displayTodos()).to.be.empty;
     });
@@ -20,6 +24,11 @@ describe('todoList', function() {
     it('can add a todo', function() {
       todoList.addTodo('item');
       expect(todoList.displayTodos()).to.include('item');
+    });
+
+    it('is able to change the text of a todo', function() {
+      todoList.changeTodo(0, 'changed');
+      expect(todoList.displayTodos()).to.include('changed');
     });
   });
 });
