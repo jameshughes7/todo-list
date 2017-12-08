@@ -7,14 +7,14 @@ describe('todoList', function() {
   beforeEach(function() {
     todoList = new TodoList();
   });
-});
 
-describe('todoList', function() {
-  it('todoList is present', function() {
-    expect(todoList).to.exist;
-  });
+  describe('todoList', function() {
+    it('todoList is present', function() {
+      expect(todoList).to.exist;
+    });
 
-  it('todoList starts with an empty array', function() {
-    expect(todoList.todos).to.be.empty;
+    it('todoList starts with an empty array', function() {
+      expect(todoList.todos()).to.be.empty;
+    });
   });
 });
