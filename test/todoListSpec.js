@@ -30,5 +30,11 @@ describe('todoList', function() {
       todoList.changeTodo(0, 'changed');
       expect(todoList.displayTodos()).to.include('changed');
     });
+
+    it('toggles the completion status of a todo', function() {
+      todoList.addTodo('item');
+      todoList.toggleCompleted(0)
+      // expect(todoList.completed).to.equal(true)
+    });
   });
 });

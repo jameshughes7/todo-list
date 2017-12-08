@@ -18,4 +18,8 @@ TodoList.prototype.changeTodo = function(position, text) {
   this.todosArray[position] = text;
 }
 
+TodoList.prototype.toggleCompleted = function() {
+  this.completed = !this.completed
+}
+
 module.exports = TodoList;
