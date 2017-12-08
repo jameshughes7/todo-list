@@ -14,7 +14,12 @@ describe('todoList', function() {
     });
 
     it('todoList starts with an empty array', function() {
-      expect(todoList.todos()).to.be.empty;
+      expect(todoList.displayTodos()).to.be.empty;
+    });
+
+    it('can add a todo', function() {
+      todoList.addTodo('item');
+      expect(todoList.displayTodos()).to.include('item');
     });
   });
 });
