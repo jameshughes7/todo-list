@@ -14,7 +14,7 @@ describe('todoList', function() {
     });
 
     it('has a default complete value of false', function() {
-      expect(todoList.completed).to.equal(false)
+      expect(todoList.completed).to.equal(false);
     });
 
     it('todoList starts with an empty array', function() {
@@ -31,18 +31,16 @@ describe('todoList', function() {
       expect(todoList.displayTodos()).to.include('changed');
     });
 
-<<<<<<< HEAD
     it('toggles the completion status of a todo', function() {
       todoList.addTodo('item');
-      todoList.toggleCompleted(0)
-      // expect(todoList.completed).to.equal(true)
+      todoList.toggleCompleted(0);
+      expect(todoList.completed).to.equal(true);
     });
-=======
+
     it('is able to delete a todo', function() {
       todoList.addTodo('bossman');
       todoList.deleteTodo(0);
       expect(todoList.displayTodos()).that.does.not.include('bossman');
-    })
->>>>>>> d304bcf6031d81e26c0a42232c065e12038669f8
+    });
   });
 });
