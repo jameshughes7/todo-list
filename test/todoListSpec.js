@@ -30,5 +30,11 @@ describe('todoList', function() {
       todoList.changeTodo(0, 'changed');
       expect(todoList.displayTodos()).to.include('changed');
     });
+
+    it('is able to delete a todo', function() {
+      todoList.addTodo('bossman');
+      todoList.deleteTodo(0);
+      expect(todoList.displayTodos()).that.does.not.include('bossman');
+    })
   });
 });

@@ -16,6 +16,10 @@ TodoList.prototype.addTodo = function(todo) {
 
 TodoList.prototype.changeTodo = function(position, text) {
   this.todosArray[position] = text;
+};
+
+TodoList.prototype.deleteTodo = function(position) {
+  this.todosArray.splice(position,1);
 }
 
 module.exports = TodoList;
