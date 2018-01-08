@@ -1,6 +1,6 @@
  'use strict';
 
-var TodoList = function() {
+function TodoList() {
   this.todosArray = [];
   this.completed = false;
 };
@@ -20,10 +20,10 @@ TodoList.prototype.changeTodo = function(position, text) {
 
 TodoList.prototype.deleteTodo = function(position) {
   this.todosArray.splice(position,1);
-}
+};
 
 TodoList.prototype.toggleCompleted = function() {
-  this.completed = !this.completed
-}
+  this.completed = !this.completed;
+};
 
 module.exports = TodoList;
